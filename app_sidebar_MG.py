@@ -124,8 +124,8 @@ def montar_base(df_long: pd.DataFrame, regional: str) -> pd.DataFrame:
     base["hover_text"] = (
         "<b>" + base["Avaliação"].astype(str) + "</b>"
         + "<br>Nota: " + base["Nota"].map(fnum)
-        + "<br>Δ: " + base["Delta"].map(fsgn)
-        + "<br>Δ%: " + base["Delta_pct"].map(fsgn) + "%"
+        + "<br>Variação Absoluta: " + base["Delta"].map(fsgn)
+        + "<br>Variação Percentual: " + base["Delta_pct"].map(fsgn) + "%"
     )
     return base
 
@@ -198,3 +198,4 @@ with col_main:
             columns={"Delta_pct": "Delta_%"}
         ).reset_index(drop=True)
         st.dataframe(mostrar, use_container_width=True)
+
