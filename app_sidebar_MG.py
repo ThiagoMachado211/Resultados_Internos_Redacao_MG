@@ -15,7 +15,7 @@ DEFAULT_XLSX = "data/Comparativo_MG.xlsx"  # ajuste se quiser outro arquivo padr
 
 st.set_page_config(page_title=PAGE_TITLE, layout="wide")
 st.title(PAGE_TITLE)
-st.caption("Cada sheet do Excel vira uma 'aba' no menu à esquerda. 1ª coluna = 'Regional'; demais = avaliações.")
+st.caption("")
 
 # ---------- CSS: deixa UI com fonte 24 e menu lateral vertical ----------
 st.markdown(f"""
@@ -192,5 +192,6 @@ with col_main:
     base = montar_base(df_long, regional)
     fig = grafico(base, f"Evolução — {regional}")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
