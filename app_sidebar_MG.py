@@ -191,8 +191,9 @@ with col_main:
     )
 
     base = montar_base(df_long, regional)
-    fig = grafico(base, f"Evolução — {regional}")
+    fig = grafico(base, f"")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
