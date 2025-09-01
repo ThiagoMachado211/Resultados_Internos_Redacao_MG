@@ -181,7 +181,7 @@ with col_main:
     df_sheet = abas[aba_sel].copy()
     df_long = preparar_df(df_sheet)
 
-    regionais = df_long["Regional"].dropna().unique()
+    regionais = df_long[""].dropna().unique()
     regional = st.selectbox(
         "Regional",
         sorted(regionais),
@@ -192,6 +192,7 @@ with col_main:
     base = montar_base(df_long, regional)
     fig = grafico(base, f"Evolução — {regional}")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
