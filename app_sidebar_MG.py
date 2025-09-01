@@ -167,7 +167,7 @@ tab_names = list(abas.keys())
 col_nav, col_main = st.columns([1, 4], gap="large")
 
 with col_nav:
-    st.markdown("**Abas**")
+    st.markdown("")
     aba_sel = st.radio(
         label="Abas",                  # rótulo não-vazio (evita warning de acessibilidade)
         options=tab_names,
@@ -192,6 +192,7 @@ with col_main:
     base = montar_base(df_long, regional)
     fig = grafico(base, f"Evolução — {regional}")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
