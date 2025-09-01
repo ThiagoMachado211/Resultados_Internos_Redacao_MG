@@ -141,7 +141,7 @@ def grafico(base: pd.DataFrame, titulo: str):
     )
     fig.update_layout(
         font=dict(size=FONT_SIZE),
-        xaxis_title="Avaliação", yaxis_title="Nota",
+        xaxis_title="", yaxis_title="Nota",
         xaxis=dict(tickfont=dict(size=FONT_SIZE), title_font=dict(size=FONT_SIZE)),
         yaxis=dict(tickfont=dict(size=FONT_SIZE), title_font=dict(size=FONT_SIZE)),
         legend=dict(font=dict(size=FONT_SIZE)),
@@ -192,6 +192,7 @@ with col_main:
     base = montar_base(df_long, regional)
     fig = grafico(base, f"Evolução — {regional}")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
