@@ -7,7 +7,7 @@ import streamlit as st
 from pandas.api.types import is_numeric_dtype
 
 # ====== CONFIG ======
-EXCEL_PATH = "data/Comparativo_MG.xlsx"
+EXCEL_PATH = "Comparativo_MG.xlsx"
 PAGE_TITLE = "Notas por Regional: Minas Gerais"
 FONT_SIZE = 24
 MARKER_SIZE = 12
@@ -173,5 +173,6 @@ with col_main:
 #            columns={"Delta_pct": "Delta_%"}
 #        ).reset_index(drop=True)
 #        st.dataframe(mostrar, use_container_width=True)
+
 
 
