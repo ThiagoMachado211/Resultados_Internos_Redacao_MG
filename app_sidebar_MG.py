@@ -193,9 +193,4 @@ with col_main:
     fig = grafico(base, f"Evolução — {regional}")
     st.plotly_chart(fig, use_container_width=True)
 
-    with st.expander("Dados (somente notas)"):
-        mostrar = base[["Regional", "Avaliação", "Nota", "Delta", "Delta_pct"]].rename(
-            columns={"Delta_pct": "Delta_%"}
-        ).reset_index(drop=True)
-        st.dataframe(mostrar, use_container_width=True)
 
