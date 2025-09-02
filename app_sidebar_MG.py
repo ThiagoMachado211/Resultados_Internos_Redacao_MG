@@ -143,7 +143,7 @@ def grafico(base: pd.DataFrame, titulo: str):
         font=dict(size=FONT_SIZE),
         xaxis_title="", yaxis_title="",
         xaxis=dict(tickfont=dict(size=FONT_SIZE), title_font=dict(size=FONT_SIZE)),
-        yaxis=dict(tickfont=dict(size=FONT_SIZE), title_font=dict(size=FONT_SIZE), range=[0.9*float(base["Nota"].min()),  1.1*float(base["Nota"].max())] ),
+        yaxis=dict(tickfont=dict(size=FONT_SIZE), title_font=dict(size=FONT_SIZE), range=[0.95*float(base["Nota"].min()),  1.05*float(base["Nota"].max())] ),
         legend=dict(font=dict(size=FONT_SIZE)),
         hovermode="x unified",
         hoverlabel=dict(font_size=FONT_SIZE),
@@ -193,6 +193,7 @@ with col_main:
     base = montar_base(df_long, regional)
     fig = grafico(base, f"")
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
